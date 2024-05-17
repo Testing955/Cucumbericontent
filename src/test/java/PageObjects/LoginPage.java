@@ -17,14 +17,22 @@ WebElement Email;
 WebElement Password;
 @FindBy(xpath="(//div[normalize-space()='Login'])[3]")
 WebElement Login;
-public void Emailfield()
+/*public void Emailfield()
 {
 Email.sendKeys("ratant@yopmail.com");
+}*/
+public void setEmail(String email) 
+{
+    Email.sendKeys(email);
 }
-public void Passwordfield()
+public void setPassword(String password) 
+{
+    Password.sendKeys(password);
+}
+/*public void Passwordfield()
 {
 Password.sendKeys("Qwerty@1");
-}
+}*/
 public void Loginbutton()
 {
 Login.click();

@@ -39,8 +39,10 @@ public class ProfessionalSignupSteps {
         Map<String, String> dataMap = dataTable.asMap(String.class, String.class);
         ps.fname(dataMap.get("firstName"));
         ps.lname(dataMap.get("lastName"));
-        ps.efield(dataMap.get("EmailAddress"));
-        ps.mobilenumber(dataMap.get("MobileNumber"));
+      //  ps.efield(dataMap.get("EmailAddress"));
+        ps.efield(BaseClass.randomAlphaNumeric()+"@yopmail.com");
+        //ps.mobilenumber(dataMap.get("MobileNumber"));
+        ps.mobilenumber(BaseClass.randomeNumber());
     }
 
     @When("the user clicks on Continue button")
@@ -59,7 +61,8 @@ public class ProfessionalSignupSteps {
         BaseClass.getLogger().info("Enter Company Name, Password, and Confirm Password");
         Map<String, String> dataMap = dataTable.asMap(String.class, String.class);
         Thread.sleep(10000);
-        ps.companynamefield(dataMap.get("EnterCompanyName"));
+       // ps.companynamefield(dataMap.get("EnterCompanyName"));
+        ps.companynamefield(BaseClass.randomeString());
         ps.enterpwd(dataMap.get("Password"));
         ps.confirmpwd(dataMap.get("ConfirmPassword"));
         
