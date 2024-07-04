@@ -27,7 +27,8 @@ public class ProfessionalSignupSteps {
     }
 
     @Given("the user choose the profesional option and click on it")
-    public void the_user_choose_the_profesional_option_and_click_on_it() {
+    public void the_user_choose_the_profesional_option_and_click_on_it() 
+    {
         BaseClass.getLogger().info("clicking on the profesional options");
         ps = new ProfessionalSignup(driver);
         ps.professionaloption();

@@ -24,7 +24,7 @@ DashboardPage dp;
 List<HashMap<String,String>>datamap;
 
 
-/*@Given("the user is on the login page")
+@Given("the user is on the login page")
 public void the_user_is_on_the_login_page() 
 {
 BaseClass.getLogger().info("clicking on the email");
@@ -52,14 +52,13 @@ public void the_user_should_be_redirected_to_the_dashboardpage()
 {
 dp = new DashboardPage(BaseClass.getDriver());
 dp.Dashboardfunction();
-}*/
-
+}
 
     //*******   Data Driven test **************
-@Given("the user should be redirected to the login Page by passing email and password with excel row {string}")  
+/*@Given("the user should be redirected to the login Page by passing email and password with excel row {string}")  
     public void check_user_navigates_to_my_account_page_by_passing_email_and_password_with_excel_data(String rows) throws IOException
     {
-	datamap = DataReader.data("/Users/hestabit/eclipse-workspace/Icontent_logindata.xlsx", "Sheet1");
+  datamap = DataReader.data("/Users/hestabit/eclipse-workspace/Icontent_logindata.xlsx", "Sheet1");
 
 
         int index=Integer.parseInt(rows)-1;
@@ -70,8 +69,10 @@ dp.Dashboardfunction();
         lp=new LoginPage(BaseClass.getDriver());
         lp.setEmail(email);
         lp.setPassword(pwd);
-        lp.Loginbutton();
-   /*     macc=new MyAccountPage(BaseClass.getDriver());
+        lp.Loginbutton();*/
+
+
+   /*macc=new MyAccountPage(BaseClass.getDriver());
         try
         {
             boolean targetpage=macc.isMyAccountPageExists();
@@ -109,7 +110,7 @@ dp.Dashboardfunction();
         {
 
             Assert.assertTrue(false);
-        }*/
-      }
+        }
+      }*/
  
 }
